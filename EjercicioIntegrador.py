@@ -107,7 +107,7 @@ margen_neto = utilidad_neta_total / ingresos_total if ingresos_total > 0 else 0
 # ------------------------------------------------------------
 st.subheader("Indicadores del periodo seleccionado")
 
-col1, col2, col3, col4, col5, col6 = st.columns(6)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric("Ingresos totales", f"$ {ingresos_total / 1e9:.2f} B")
@@ -115,6 +115,9 @@ with col2:
     st.metric("Utilidad bruta", f"$ {utilidad_bruta_total / 1e9:.2f} B")
 with col3:
     st.metric("Utilidad operativa", f"$ {utilidad_op_total / 1e9:.2f} B")
+
+col4, col5, col6 = st.columns(3)
+
 with col4:
     st.metric("Utilidad neta", f"$ {utilidad_neta_total / 1e9:.2f} B")
 with col5:
